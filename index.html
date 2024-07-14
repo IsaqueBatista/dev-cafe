@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cafeteria do Dev - O melhor café para programadores da cidade"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,9 +20,7 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <link rel="shortcut icon" href="./img/logo-cafe.png" type="image/x-icon">
-
+    <link rel="shortcut icon" href="./img/logo-cafe.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
 
     <title>Cafeteria do Dev</title>
@@ -28,36 +30,36 @@
     <header>
       <div class="container-header">
         <div class="div-logo">
-          <a href="#">
+          <a href="#" aria-label="Página inicial">
             <img
               src="./img/logo-cafe.png"
-              alt="logo-cafe"
+              alt="Logo da Cafeteria do Dev"
               class="div-logo-img"
             />
             Cafeteria do Dev
           </a>
         </div>
 
-        <div class="div-list">
+        <nav class="div-list">
           <ul class="menu-list">
             <li><a href="#" class="menu-link">Home</a></li>
-            <li><a href="#" class="menu-link">Serviços</a></li>
-            <li><a href="#" class="menu-link">Sobre</a></li>
+            <li><a href="#servicos" class="menu-link">Serviços</a></li>
+            <li><a href="#footer" class="menu-link">Sobre</a></li>
           </ul>
-          <button class="button-list">
+          <button class="button-list" aria-label="Fazer pedido">
             Pedido
             <img
               src="./img/icon-coffe-button.png"
-              alt="icone-café-button"
+              alt="Ícone de café"
               class="img-button-links"
             />
           </button>
-        </div>
+        </nav>
       </div>
     </header>
 
     <main>
-      <div
+      <section
         class="container-home"
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
@@ -74,74 +76,86 @@
           </div>
 
           <div>
-            <img src="./img/cafe-2.png" alt="Imagem Café" class="img-home" />
+            <img
+              src="./img/cafe-2.png"
+              alt="Xícara de café fumegante"
+              class="img-home"
+              loading="lazy"
+            />
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
-    <section class="section-services">
+    <section id="servicos" class="section-services">
       <div class="container-services" data-aos="fade-up" data-aos-delay="100">
-        <h1 class="tittle-section-services">O Café feito para você</h1>
+        <h2 class="tittle-section-services">O Café feito para você</h2>
       </div>
 
       <div class="div-card">
-        <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="350">
           <div class="div-card-image">
             <img
               class="image-card"
               src="./img/american.png"
-              alt="café americano"
+              alt="Café americano"
+              loading="lazy"
             />
           </div>
 
           <div class="div-text-services-card">
-            <h1 class="h1-card-service">Americano</h1>
+            <h3 class="h1-card-service">Americano</h3>
             <p class="p-card-service">
               Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit
               amet.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
           <div class="div-card-image">
             <img
               class="image-card"
               src="./img/cafe-expresso.png"
-              alt="café expresso"
+              alt="Café expresso"
+              loading="lazy"
             />
           </div>
 
           <div class="div-text-services-card">
-            <h1 class="h1-card-service">Expresso</h1>
+            <h3 class="h1-card-service">Expresso</h3>
             <p class="p-card-service">
               Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit
-              amet
+              amet.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="500">
           <div class="div-card-image">
-            <img class="image-card" src="./img/capuccino.png" alt="capuccino" />
+            <img
+              class="image-card"
+              src="./img/capuccino.png"
+              alt="Capuccino"
+              loading="lazy"
+            />
           </div>
 
           <div class="div-text-services-card">
-            <h1 class="h1-card-service">Cappuccino</h1>
+            <h3 class="h1-card-service">Cappuccino</h3>
             <p class="p-card-service">
               Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit
-              amet
+              amet.
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <footer>
+    <footer id="footer">
       <div class="div-logo div-logo-footer">
-        <a href="#">
-          <img class="div-logo-img" src="./img/logo-cafe.png" alt="logo-cafe">
+        <a href="#" aria-label="Voltar para o topo">
+          <img class="div-logo-img" src="./img/logo-cafe.png" alt="logo-cafe" />
           Cafeteria do Dev
         </a>
         <p class="p-footer">Desenvolvido por Clube do Portfólio !!</p>
@@ -156,3 +170,16 @@
     </script>
   </body>
 </html>
+
+<!-- Algumas melhorias feitas
+  
+    - Incluí uma meta description para melhorar a visibilidade nos mecanismos de busca. 
+
+    - Usar tags semânticas como <nav> para a navegação.
+
+    - Usar tags <h2>, <h3> etc. para criar uma hierarquia de títulos adequada.
+
+    - Uso de elementos <article> para os cards de serviços.
+    
+    - Considerar o carregamento lazy das imagens, especialmente para as que não estão imediatamente visíveis.
+    -->
